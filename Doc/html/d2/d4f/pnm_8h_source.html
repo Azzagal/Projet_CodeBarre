@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet 2 INFO0030:  Fichier source de pnm.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet 2 INFO0030
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">pnm.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d2/d4f/pnm_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * Include guard (pour éviter les problèmes d&#39;inclusions multiplies</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * Bonne pratique: toujours encadrer un header avec un include guard</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#ifndef __PNM__</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define __PNM__</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d2/d4f/pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">   23</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../de/d82/struct_p_n_m__t.html">PNM_t</a> <a class="code" href="../../de/d82/struct_p_n_m__t.html">PNM</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="../../d2/d4f/pnm_8h.html#a9a273d2260acafb79f940aa19f43d290">acces_type</a>(<a class="code" href="../../de/d82/struct_p_n_m__t.html">PNM</a> *image);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="../../d2/d4f/pnm_8h.html#ae5d11d9f2b1bb42aa78d20b4dd9fdd34">acces_commentaire</a>(<a class="code" href="../../de/d82/struct_p_n_m__t.html">PNM</a> *image);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d2/d4f/pnm_8h.html#ab1f2b62e42df2f54a51302167e2be374">acces_tot_coul</a>(<a class="code" href="../../de/d82/struct_p_n_m__t.html">PNM</a> *image);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d2/d4f/pnm_8h.html#a929c827bbce1bfda5b49f42f612470c7">acces_colonnes</a>(<a class="code" href="../../de/d82/struct_p_n_m__t.html">PNM</a> *image);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d2/d4f/pnm_8h.html#a26f600795910e5bfbfdc399aea58983c">acces_lignes</a>(<a class="code" href="../../de/d82/struct_p_n_m__t.html">PNM</a> *image);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d2/d4f/pnm_8h.html#adf533a1bc155f9ee83d90c5a1564468f">load_pnm</a>(<a class="code" href="../../de/d82/struct_p_n_m__t.html">PNM</a> **image, <span class="keywordtype">char</span>* filename);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keywordtype">int</span> write_pnm(<a class="code" href="../../de/d82/struct_p_n_m__t.html">PNM</a> *image, <span class="keywordtype">char</span>* filename);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<a class="code" href="../../de/d82/struct_p_n_m__t.html">PNM</a> *<a class="code" href="../../d2/d4f/pnm_8h.html#aa9a1dbbaac773193c3a0c512fd471b5a">cree_image</a>(<span class="keywordtype">unsigned</span> lignes , <span class="keywordtype">unsigned</span> colonnes, <span class="keywordtype">unsigned</span> tot_coul, <span class="keywordtype">char</span> *commentaire, <span class="keywordtype">char</span> *type);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d4f/pnm_8h.html#ae287d0c32b1d7ab14d50d03a68f9694e">detruit_image</a>(<a class="code" href="../../de/d82/struct_p_n_m__t.html">PNM</a> *image);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d2/d4f/pnm_8h.html#a26cacce784466c209ca1fc88060ae061">verification_format</a>(<span class="keywordtype">char</span> *format, <span class="keywordtype">char</span> *fichier);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d4f/pnm_8h.html#ad76dbb4b89727e0a47cd473f291b95b6">gestion_option</a>(<span class="keywordtype">char</span> *optstring, <span class="keywordtype">char</span> *format, <span class="keywordtype">char</span> *entree, <span class="keywordtype">char</span> *sortie, <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d2/d4f/pnm_8h.html#aeee0556b220a6f52ab7a25095ff814c9">verifie_sortie</a>(<span class="keywordtype">char</span> *sortie);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor">#endif // __PNM__</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="apnm_8h_html_ae287d0c32b1d7ab14d50d03a68f9694e"><div class="ttname"><a href="../../d2/d4f/pnm_8h.html#ae287d0c32b1d7ab14d50d03a68f9694e">detruit_image</a></div><div class="ttdeci">void detruit_image(PNM *image)</div><div class="ttdoc">retire la mémoire allouée pour la structure PNM</div><div class="ttdef"><b>Definition:</b> pnm.c:36</div></div>
+<div class="ttc" id="apnm_8h_html_adf533a1bc155f9ee83d90c5a1564468f"><div class="ttname"><a href="../../d2/d4f/pnm_8h.html#adf533a1bc155f9ee83d90c5a1564468f">load_pnm</a></div><div class="ttdeci">int load_pnm(PNM **image, char *filename)</div><div class="ttdoc">Charge une image PNM depuis un fichier.</div><div class="ttdef"><b>Definition:</b> pnm.c:104</div></div>
+<div class="ttc" id="apnm_8h_html_a9a273d2260acafb79f940aa19f43d290"><div class="ttname"><a href="../../d2/d4f/pnm_8h.html#a9a273d2260acafb79f940aa19f43d290">acces_type</a></div><div class="ttdeci">char * acces_type(PNM *image)</div><div class="ttdoc">Donne accès au champ type de la structure de donnée PNM.</div><div class="ttdef"><b>Definition:</b> pnm.c:348</div></div>
+<div class="ttc" id="apnm_8h_html_ab1f2b62e42df2f54a51302167e2be374"><div class="ttname"><a href="../../d2/d4f/pnm_8h.html#ab1f2b62e42df2f54a51302167e2be374">acces_tot_coul</a></div><div class="ttdeci">int acces_tot_coul(PNM *image)</div><div class="ttdoc">Donne accès au champ tot_coul de la structure de donnée PNM.</div><div class="ttdef"><b>Definition:</b> pnm.c:358</div></div>
+<div class="ttc" id="apnm_8h_html_aa9a1dbbaac773193c3a0c512fd471b5a"><div class="ttname"><a href="../../d2/d4f/pnm_8h.html#aa9a1dbbaac773193c3a0c512fd471b5a">cree_image</a></div><div class="ttdeci">PNM * cree_image(unsigned lignes, unsigned colonnes, unsigned tot_coul, char *commentaire, char *type)</div><div class="ttdoc">alloue de la mémoire pour une image.</div><div class="ttdef"><b>Definition:</b> pnm.c:46</div></div>
+<div class="ttc" id="apnm_8h_html_aeee0556b220a6f52ab7a25095ff814c9"><div class="ttname"><a href="../../d2/d4f/pnm_8h.html#aeee0556b220a6f52ab7a25095ff814c9">verifie_sortie</a></div><div class="ttdeci">int verifie_sortie(char *sortie)</div><div class="ttdoc">Vérifie que la chaine de caratères passée en argument ne contient pas de caratères interdits....</div><div class="ttdef"><b>Definition:</b> pnm.c:296</div></div>
+<div class="ttc" id="astruct_p_n_m__t_html"><div class="ttname"><a href="../../de/d82/struct_p_n_m__t.html">PNM_t</a></div><div class="ttdef"><b>Definition:</b> pnm.c:26</div></div>
+<div class="ttc" id="apnm_8h_html_ae5d11d9f2b1bb42aa78d20b4dd9fdd34"><div class="ttname"><a href="../../d2/d4f/pnm_8h.html#ae5d11d9f2b1bb42aa78d20b4dd9fdd34">acces_commentaire</a></div><div class="ttdeci">char * acces_commentaire(PNM *image)</div><div class="ttdoc">Donne accès au champ commentaire de la structure de donnée PNM.</div><div class="ttdef"><b>Definition:</b> pnm.c:353</div></div>
+<div class="ttc" id="apnm_8h_html_a26cacce784466c209ca1fc88060ae061"><div class="ttname"><a href="../../d2/d4f/pnm_8h.html#a26cacce784466c209ca1fc88060ae061">verification_format</a></div><div class="ttdeci">int verification_format(char *format, char *fichier)</div><div class="ttdoc">vérifie la correspondance d'un format avec un fichier.</div><div class="ttdef"><b>Definition:</b> pnm.c:94</div></div>
+<div class="ttc" id="apnm_8h_html_a929c827bbce1bfda5b49f42f612470c7"><div class="ttname"><a href="../../d2/d4f/pnm_8h.html#a929c827bbce1bfda5b49f42f612470c7">acces_colonnes</a></div><div class="ttdeci">int acces_colonnes(PNM *image)</div><div class="ttdoc">Donne accès au champ colonnes de la structure de donnée PNM.</div><div class="ttdef"><b>Definition:</b> pnm.c:363</div></div>
+<div class="ttc" id="apnm_8h_html_ad76dbb4b89727e0a47cd473f291b95b6"><div class="ttname"><a href="../../d2/d4f/pnm_8h.html#ad76dbb4b89727e0a47cd473f291b95b6">gestion_option</a></div><div class="ttdeci">void gestion_option(char *optstring, char *format, char *entree, char *sortie, int argc, char *argv[])</div><div class="ttdoc">Gère les options introduites à l'execution d'un programme.</div><div class="ttdef"><b>Definition:</b> pnm.c:265</div></div>
+<div class="ttc" id="apnm_8h_html_a26f600795910e5bfbfdc399aea58983c"><div class="ttname"><a href="../../d2/d4f/pnm_8h.html#a26f600795910e5bfbfdc399aea58983c">acces_lignes</a></div><div class="ttdeci">int acces_lignes(PNM *image)</div><div class="ttdoc">Donne accès au champ lignes de la structure de donnée PNM.</div><div class="ttdef"><b>Definition:</b> pnm.c:368</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

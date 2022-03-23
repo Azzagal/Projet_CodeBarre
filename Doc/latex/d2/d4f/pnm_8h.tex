@@ -1,0 +1,281 @@
+\hypertarget{pnm_8h}{}\doxysection{Référence du fichier pnm.\+h}
+\label{pnm_8h}\index{pnm.h@{pnm.h}}
+
+
+Ce fichier contient les déclarations de types et les prototypes des fonctions pour la manipulation d\textquotesingle{}images P\+NM.  
+
+
+\doxysubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_p_n_m__t}{P\+N\+M\+\_\+t}} \mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}}
+\begin{DoxyCompactList}\small\item\em Déclaration du type opaque P\+NM. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{pnm_8h_a9a273d2260acafb79f940aa19f43d290}{acces\+\_\+type}} (\mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}} $\ast$image)
+\begin{DoxyCompactList}\small\item\em Donne accès au champ type de la structure de donnée P\+NM. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{pnm_8h_ae5d11d9f2b1bb42aa78d20b4dd9fdd34}{acces\+\_\+commentaire}} (\mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}} $\ast$image)
+\begin{DoxyCompactList}\small\item\em Donne accès au champ commentaire de la structure de donnée P\+NM. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{pnm_8h_ab1f2b62e42df2f54a51302167e2be374}{acces\+\_\+tot\+\_\+coul}} (\mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}} $\ast$image)
+\begin{DoxyCompactList}\small\item\em Donne accès au champ tot\+\_\+coul de la structure de donnée P\+NM. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{pnm_8h_a929c827bbce1bfda5b49f42f612470c7}{acces\+\_\+colonnes}} (\mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}} $\ast$image)
+\begin{DoxyCompactList}\small\item\em Donne accès au champ colonnes de la structure de donnée P\+NM. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{pnm_8h_a26f600795910e5bfbfdc399aea58983c}{acces\+\_\+lignes}} (\mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}} $\ast$image)
+\begin{DoxyCompactList}\small\item\em Donne accès au champ lignes de la structure de donnée P\+NM. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{pnm_8h_adf533a1bc155f9ee83d90c5a1564468f}{load\+\_\+pnm}} (\mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}} $\ast$$\ast$image, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Charge une image P\+NM depuis un fichier. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pnm_8h_af899a2931ee1eaa8ecb6a313710ff228}\label{pnm_8h_af899a2931ee1eaa8ecb6a313710ff228}} 
+int {\bfseries write\+\_\+pnm} (\mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}} $\ast$image, char $\ast$filename)
+\item 
+\mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}} $\ast$ \mbox{\hyperlink{pnm_8h_aa9a1dbbaac773193c3a0c512fd471b5a}{cree\+\_\+image}} (unsigned lignes, unsigned colonnes, unsigned tot\+\_\+coul, char $\ast$commentaire, char $\ast$type)
+\begin{DoxyCompactList}\small\item\em alloue de la mémoire pour une image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pnm_8h_ae287d0c32b1d7ab14d50d03a68f9694e}{detruit\+\_\+image}} (\mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}} $\ast$image)
+\begin{DoxyCompactList}\small\item\em retire la mémoire allouée pour la structure P\+NM \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{pnm_8h_a26cacce784466c209ca1fc88060ae061}{verification\+\_\+format}} (char $\ast$format, char $\ast$fichier)
+\begin{DoxyCompactList}\small\item\em vérifie la correspondance d\textquotesingle{}un format avec un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{pnm_8h_ad76dbb4b89727e0a47cd473f291b95b6}{gestion\+\_\+option}} (char $\ast$optstring, char $\ast$format, char $\ast$entree, char $\ast$sortie, int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Gère les options introduites à l\textquotesingle{}execution d\textquotesingle{}un programme. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{pnm_8h_aeee0556b220a6f52ab7a25095ff814c9}{verifie\+\_\+sortie}} (char $\ast$sortie)
+\begin{DoxyCompactList}\small\item\em Vérifie que la chaine de caratères passée en argument ne contient pas de caratères interdits. Soit / \textbackslash{} \+: $\ast$ ? " $<$ $>$ $\vert$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Ce fichier contient les déclarations de types et les prototypes des fonctions pour la manipulation d\textquotesingle{}images P\+NM. 
+
+\begin{DoxyAuthor}{Auteur}
+Lorenzen Pierre s203724 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+23/03/2022
+\end{DoxyDate}
+projet\+: I\+N\+F\+O0030 Projet 1 
+
+\doxysubsection{Documentation des définitions de type}
+\mbox{\Hypertarget{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}\label{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}} 
+\index{pnm.h@{pnm.h}!PNM@{PNM}}
+\index{PNM@{PNM}!pnm.h@{pnm.h}}
+\doxysubsubsection{\texorpdfstring{PNM}{PNM}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_p_n_m__t}{P\+N\+M\+\_\+t}} \mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}}}
+
+
+
+Déclaration du type opaque P\+NM. 
+
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{pnm_8h_a929c827bbce1bfda5b49f42f612470c7}\label{pnm_8h_a929c827bbce1bfda5b49f42f612470c7}} 
+\index{pnm.h@{pnm.h}!acces\_colonnes@{acces\_colonnes}}
+\index{acces\_colonnes@{acces\_colonnes}!pnm.h@{pnm.h}}
+\doxysubsubsection{\texorpdfstring{acces\_colonnes()}{acces\_colonnes()}}
+{\footnotesize\ttfamily int acces\+\_\+colonnes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}} $\ast$}]{image }\end{DoxyParamCaption})}
+
+
+
+Donne accès au champ colonnes de la structure de donnée P\+NM. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em image} & un pointeur sur P\+NM.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la fonction retourne le nombre de colonnes de l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pnm_8h_ae5d11d9f2b1bb42aa78d20b4dd9fdd34}\label{pnm_8h_ae5d11d9f2b1bb42aa78d20b4dd9fdd34}} 
+\index{pnm.h@{pnm.h}!acces\_commentaire@{acces\_commentaire}}
+\index{acces\_commentaire@{acces\_commentaire}!pnm.h@{pnm.h}}
+\doxysubsubsection{\texorpdfstring{acces\_commentaire()}{acces\_commentaire()}}
+{\footnotesize\ttfamily char$\ast$ acces\+\_\+commentaire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}} $\ast$}]{image }\end{DoxyParamCaption})}
+
+
+
+Donne accès au champ commentaire de la structure de donnée P\+NM. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em image} & un pointeur sur P\+NM.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la fonction retourne le commentaire de l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pnm_8h_a26f600795910e5bfbfdc399aea58983c}\label{pnm_8h_a26f600795910e5bfbfdc399aea58983c}} 
+\index{pnm.h@{pnm.h}!acces\_lignes@{acces\_lignes}}
+\index{acces\_lignes@{acces\_lignes}!pnm.h@{pnm.h}}
+\doxysubsubsection{\texorpdfstring{acces\_lignes()}{acces\_lignes()}}
+{\footnotesize\ttfamily int acces\+\_\+lignes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}} $\ast$}]{image }\end{DoxyParamCaption})}
+
+
+
+Donne accès au champ lignes de la structure de donnée P\+NM. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em image} & un pointeur sur P\+NM.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la fonction retourne le nombre de lignes de l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pnm_8h_ab1f2b62e42df2f54a51302167e2be374}\label{pnm_8h_ab1f2b62e42df2f54a51302167e2be374}} 
+\index{pnm.h@{pnm.h}!acces\_tot\_coul@{acces\_tot\_coul}}
+\index{acces\_tot\_coul@{acces\_tot\_coul}!pnm.h@{pnm.h}}
+\doxysubsubsection{\texorpdfstring{acces\_tot\_coul()}{acces\_tot\_coul()}}
+{\footnotesize\ttfamily int acces\+\_\+tot\+\_\+coul (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}} $\ast$}]{image }\end{DoxyParamCaption})}
+
+
+
+Donne accès au champ tot\+\_\+coul de la structure de donnée P\+NM. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em image} & un pointeur sur P\+NM.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la fonction retourne le nombre totale de couleur de l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pnm_8h_a9a273d2260acafb79f940aa19f43d290}\label{pnm_8h_a9a273d2260acafb79f940aa19f43d290}} 
+\index{pnm.h@{pnm.h}!acces\_type@{acces\_type}}
+\index{acces\_type@{acces\_type}!pnm.h@{pnm.h}}
+\doxysubsubsection{\texorpdfstring{acces\_type()}{acces\_type()}}
+{\footnotesize\ttfamily char$\ast$ acces\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}} $\ast$}]{image }\end{DoxyParamCaption})}
+
+
+
+Donne accès au champ type de la structure de donnée P\+NM. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em image} & un pointeur sur P\+NM.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la fonction retourne le type de l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pnm_8h_aa9a1dbbaac773193c3a0c512fd471b5a}\label{pnm_8h_aa9a1dbbaac773193c3a0c512fd471b5a}} 
+\index{pnm.h@{pnm.h}!cree\_image@{cree\_image}}
+\index{cree\_image@{cree\_image}!pnm.h@{pnm.h}}
+\doxysubsubsection{\texorpdfstring{cree\_image()}{cree\_image()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}}$\ast$ cree\+\_\+image (\begin{DoxyParamCaption}\item[{unsigned}]{lignes,  }\item[{unsigned}]{colonnes,  }\item[{unsigned}]{tot\+\_\+coul,  }\item[{char $\ast$}]{commentaire,  }\item[{char $\ast$}]{type }\end{DoxyParamCaption})}
+
+
+
+alloue de la mémoire pour une image. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em lignes} & est le nombre de lignes à allouer à l\textquotesingle{}image. \\
+\hline
+{\em colonnes} & est le nombre de colonnes à allouer à l\textquotesingle{}image. \\
+\hline
+{\em tot\+\_\+coul} & est le nombre maximal de couleurs de l\textquotesingle{}image. \\
+\hline
+{\em commentaire} & est la ligne de commentaire de l\textquotesingle{}image si il y en a une. \\
+\hline
+{\em type} & est le type de l\textquotesingle{}image.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\+: L\textquotesingle{}image avec l\textquotesingle{}espace mémoire alloué Null si il y a eu un problème 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pnm_8h_ae287d0c32b1d7ab14d50d03a68f9694e}\label{pnm_8h_ae287d0c32b1d7ab14d50d03a68f9694e}} 
+\index{pnm.h@{pnm.h}!detruit\_image@{detruit\_image}}
+\index{detruit\_image@{detruit\_image}!pnm.h@{pnm.h}}
+\doxysubsubsection{\texorpdfstring{detruit\_image()}{detruit\_image()}}
+{\footnotesize\ttfamily void detruit\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}} $\ast$}]{image }\end{DoxyParamCaption})}
+
+
+
+retire la mémoire allouée pour la structure P\+NM 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em image} & est la structure à laquelle on veut retirer la mémoire \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{pnm_8h_ad76dbb4b89727e0a47cd473f291b95b6}\label{pnm_8h_ad76dbb4b89727e0a47cd473f291b95b6}} 
+\index{pnm.h@{pnm.h}!gestion\_option@{gestion\_option}}
+\index{gestion\_option@{gestion\_option}!pnm.h@{pnm.h}}
+\doxysubsubsection{\texorpdfstring{gestion\_option()}{gestion\_option()}}
+{\footnotesize\ttfamily void gestion\+\_\+option (\begin{DoxyParamCaption}\item[{char $\ast$}]{optstring,  }\item[{char $\ast$}]{format,  }\item[{char $\ast$}]{entree,  }\item[{char $\ast$}]{sortie,  }\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Gère les options introduites à l\textquotesingle{}execution d\textquotesingle{}un programme. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em optstring} & est la chaine de caractères qui défini les paramètres à prendre en compte. \\
+\hline
+{\em format} & est le format du fichier passé en argument. \\
+\hline
+{\em entree} & est l\textquotesingle{}emplacement du fichier passé en argument. \\
+\hline
+{\em sortie} & est le nom du fichier de sortie. \\
+\hline
+{\em argc} & le premier argument de la fonction main. \\
+\hline
+{\em argv} & le deuxième argument de la fonxtion main. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{pnm_8h_adf533a1bc155f9ee83d90c5a1564468f}\label{pnm_8h_adf533a1bc155f9ee83d90c5a1564468f}} 
+\index{pnm.h@{pnm.h}!load\_pnm@{load\_pnm}}
+\index{load\_pnm@{load\_pnm}!pnm.h@{pnm.h}}
+\doxysubsubsection{\texorpdfstring{load\_pnm()}{load\_pnm()}}
+{\footnotesize\ttfamily int load\+\_\+pnm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pnm_8h_a5685d2cc86af79912d0d3e882e9640fd}{P\+NM}} $\ast$$\ast$}]{image,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Charge une image P\+NM depuis un fichier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em image} & l\textquotesingle{}adresse d\textquotesingle{}un pointeur sur P\+NM à laquelle écrire l\textquotesingle{}adresse de l\textquotesingle{}image chargée. \\
+\hline
+{\em filename} & le chemin vers le fichier contenant l\textquotesingle{}image.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\+: 0 Succès -\/1 Erreur à l\textquotesingle{}allocation de mémoire -\/2 Nom du fichier malformé -\/3 Contenu du fichier malformé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pnm_8h_a26cacce784466c209ca1fc88060ae061}\label{pnm_8h_a26cacce784466c209ca1fc88060ae061}} 
+\index{pnm.h@{pnm.h}!verification\_format@{verification\_format}}
+\index{verification\_format@{verification\_format}!pnm.h@{pnm.h}}
+\doxysubsubsection{\texorpdfstring{verification\_format()}{verification\_format()}}
+{\footnotesize\ttfamily int verification\+\_\+format (\begin{DoxyParamCaption}\item[{char $\ast$}]{format,  }\item[{char $\ast$}]{fichier }\end{DoxyParamCaption})}
+
+
+
+vérifie la correspondance d\textquotesingle{}un format avec un fichier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em format} & est le format à retrouver dans un fichier. \\
+\hline
+{\em fichier} & est un fichier avec le format pbm, pgm ou ppm.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\+: 0 Succès -\/1 le format est différent du format du fichier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{pnm_8h_aeee0556b220a6f52ab7a25095ff814c9}\label{pnm_8h_aeee0556b220a6f52ab7a25095ff814c9}} 
+\index{pnm.h@{pnm.h}!verifie\_sortie@{verifie\_sortie}}
+\index{verifie\_sortie@{verifie\_sortie}!pnm.h@{pnm.h}}
+\doxysubsubsection{\texorpdfstring{verifie\_sortie()}{verifie\_sortie()}}
+{\footnotesize\ttfamily int verifie\+\_\+sortie (\begin{DoxyParamCaption}\item[{char $\ast$}]{sortie }\end{DoxyParamCaption})}
+
+
+
+Vérifie que la chaine de caratères passée en argument ne contient pas de caratères interdits. Soit / \textbackslash{} \+: $\ast$ ? " $<$ $>$ $\vert$. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em sortie} & est la chaine de caratères à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\+: 0 Succès -\/1 sortie contient au moins un des caratères interdits. 
+\end{DoxyReturn}
