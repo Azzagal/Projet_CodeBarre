@@ -1,0 +1,11 @@
+CC=gcc
+LD=gcc
+CFLAGS=--std=c99 --pedantic -Wall -Wextra -Wmissing-prototypes
+LDFLAGS=
+EXEC_TEST=codebarre_test
+EXEC=codebarre
+TAR=tar
+TARNAME=3
+AR=ar
+RANLIB=ranlib
+DOXYGEN=doxygen
