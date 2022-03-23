@@ -16,5 +16,5 @@
 #include <string.h>
 
 #include "codebarre.h"
-#include "../Libpnm/libpnm.a"
+#include "libpnm.a"
 
