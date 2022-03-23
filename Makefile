@@ -26,9 +26,8 @@ clean:
 doc:
 	$(DOXYGEN) Doc/Doxyfile
 
-test: $(EXEC_TEST)
-	$(LD) -o $(EXEC_TEST) 
-
+test: $(OBJECTS)
+	$(LD) -o $(EXEC_TEST) $(OBJECTS) $(LDFLAGS)
 lib: libpnm.a
 	
 archive:
@@ -37,8 +36,8 @@ archive:
 $(EXEC): main.o codebarre.o
 	$(LD) -o $(EXEC) main.o codebarre.o $(LDFLAGS)
 
-$(EXEC_TEST): $(OBJECTS)
-	$(LD) -o $(EXEC_TEST) $(OBJECTS) $(LDFLAGS)
+#$(EXEC_TEST): $(OBJECTS)
+#	$(LD) -o $(EXEC_TEST) $(OBJECTS) $(LDFLAGS)
 
 pnm.o: pnm.c
 	$(CC) -c pnm.c -o pnm.o $(CFLAGS)
