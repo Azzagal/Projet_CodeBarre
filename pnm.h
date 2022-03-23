@@ -5,7 +5,7 @@
  * des fonctions pour la manipulation d'images PNM.
  *
  * @author: Lorenzen Pierre s203724
- * @date:27/02/2022
+ * @date:23/03/2022
  * @projet: INFO0030 Projet 1
  */
 
@@ -21,6 +21,66 @@
  *
  */
 typedef struct PNM_t PNM;
+
+/**
+ * acces_type
+ * 
+ * Donne accès au champ type de la structure de donnée PNM
+ * 
+ * @param image un pointeur sur PNM.
+ * 
+ * @pre image != NULL
+ * @post la fonction retourne le type de l'image
+ */
+char* acces_type(PNM *image);
+
+/**
+ * acces_commentaire
+ * 
+ * Donne accès au champ commentaire de la structure de donnée PNM
+ * 
+ * @param image un pointeur sur PNM.
+ * 
+ * @pre image != NULL
+ * @post la fonction retourne le commentaire de l'image
+ */
+char* acces_commentaire(PNM *image);
+
+/**
+ * acces_tot_coul
+ * 
+ * Donne accès au champ tot_coul de la structure de donnée PNM
+ * 
+ * @param image un pointeur sur PNM.
+ * 
+ * @pre image != NULL
+ * @post la fonction retourne le nombre totale de couleur de l'image
+ */
+int acces_tot_coul(PNM *image);
+
+/**
+ * acces_colonnes
+ * 
+ * Donne accès au champ colonnes de la structure de donnée PNM
+ * 
+ * @param image un pointeur sur PNM.
+ * 
+ * @pre image != NULL
+ * @post la fonction retourne le nombre de colonnes de l'image
+ */
+int acces_colonnes(PNM *image);
+
+/**
+ * acces_lignes
+ * 
+ * Donne accès au champ lignes de la structure de donnée PNM
+ * 
+ * @param image un pointeur sur PNM.
+ * 
+ * @pre image != NULL
+ * @post la fonction retourne le nombre de lignes de l'image
+ */
+int acces_lignes(PNM *image);
 
 /**
  * load_pnm

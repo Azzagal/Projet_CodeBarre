@@ -5,8 +5,8 @@
  * les fonctions de manipulation d'images PNM.
  *
  * @author: Lorenzen Pierre s203724
- * @date: 27/02/2022
- * @projet: INFO0030 Projet 1
+ * @date: 23/03/2022
+ * @projet: INFO0030 Projet 2
  */
 
 #include <stdio.h>
@@ -94,10 +94,11 @@ PNM *cree_image(unsigned lignes , unsigned colonnes, unsigned tot_coul, char *co
 int verification_format(char *format , char *fichier){
   assert(format!= NULL && fichier != NULL);
 
-  for(unsigned i=0; format[i] !=0; i++)
-    format[i] = tolower(format[i]);
-  printf("%s\n",format);
-
+  for(unsigned i=0; format[i] !=0; i++){
+    printf("%c\n",format[i+1]);
+    format[i] -= 32;
+    printf("%c\n",format[i+1]);
+}
   if(strncmp(format,fichier,strlen(format-1)) == 0){ return 0; }
   else{ return -1; }
 }//Fin verification_format()
@@ -345,3 +346,28 @@ int verifie_sortie(char *sortie){
   }
   return erreur;
 }//Fin verifie_sortie()
+
+char* acces_type(PNM *image){
+  assert(image !=NULL);
+  return image->type;
+}
+
+char* acces_commentaire(PNM *image){
+  assert(image !=NULL);
+  return image->commentaire;
+}
+
+int acces_tot_coul(PNM *image){
+  assert(image !=NULL);
+  return image->tot_coul;
+}
+
+int acces_colonnes(PNM *image){
+  assert(image !=NULL);
+  return image->colonnes;
+}
+
+int acces_lignes(PNM *image){
+  assert(image !=NULL);
+  return image->lignes;
+}
