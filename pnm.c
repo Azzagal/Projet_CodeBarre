@@ -94,11 +94,9 @@ PNM *cree_image(unsigned lignes , unsigned colonnes, unsigned tot_coul, char *co
 int verification_format(char *format , char *fichier){
   assert(format!= NULL && fichier != NULL);
 
-  for(unsigned i=0; format[i] !=0; i++){
-    printf("%c\n",format[i+1]);
-    format[i] -= 32;
-    printf("%c\n",format[i+1]);
-}
+  for(unsigned i=0; format[i] !=0; i++)
+    format[i] = tolower(format[i]);
+    
   if(strncmp(format,fichier,strlen(format-1)) == 0){ return 0; }
   else{ return -1; }
 }//Fin verification_format()
