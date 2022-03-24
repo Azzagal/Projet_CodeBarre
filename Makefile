@@ -28,7 +28,8 @@ doc:
 
 test: $(OBJECTS)
 	$(LD) -o $(EXEC_TEST) $(OBJECTS) $(LDFLAGS)
-lib: libpnm.a
+
+lib: libpnm.a libgest.a
 	
 archive:
 	$(TAR) cvf $(TARNAME) Makefile Makefile.compilation Code/ Rapport/
@@ -54,6 +55,13 @@ codebarre-test.o: codebarre-test.c
 pnm-test.o: pnm-test.c
 	$(CC) -c pnm-test.c -o pnm-test.o $(CFLAGS)
 
+GestOpt.o: GestOpt.c
+	$(CC) -c GestOpt.c -o GestOpt.o $(CFLAGS)
+
 libpnm.a: pnm.o
+	$(AR) ruv $@ $?
+	$(RANLIB) $@
+
+libgest.a: GestOpt.o
 	$(AR) ruv $@ $?
 	$(RANLIB) $@	
