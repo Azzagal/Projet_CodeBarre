@@ -150,20 +150,7 @@ void detruit_image(PNM *image);
  *
  */
 int verification_format(char *format, char *fichier);
-/**
- * \fn void gestion_option(char *optstring, char *format, char *entree, char *sortie, int argc, char *argv[])
- *
- * \brief Gère les options introduites à l'execution d'un programme.
- *
- * \param optstring est la chaine de caractères qui défini les paramètres à prendre en compte.
- * \param format est le format du fichier passé en argument.
- * \param entree est l'emplacement du fichier passé en argument.
- * \param sortie est le nom du fichier de sortie.
- * \param argc le premier argument de la fonction main.
- * \param argv le deuxième argument de la fonxtion main.
- *
- */
-void gestion_option(char *optstring, char *format, char *entree, char *sortie, int argc, char *argv[]);
+
 /**
  * \fn int verifie_sortie(char *sortie)
  *

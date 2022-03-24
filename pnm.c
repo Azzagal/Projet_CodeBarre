@@ -12,11 +12,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include <getopt.h>
 #include <string.h>
-#include <ctype.h>
 
 #include "pnm.h"
+#include "GestOpt.h"
 
 /**
  * 
@@ -93,11 +92,31 @@ PNM *cree_image(unsigned lignes , unsigned colonnes, unsigned tot_coul, char *co
 
 int verification_format(char *format , char *fichier){
   assert(format!= NULL && fichier != NULL);
+  char sortie[4];
+  for(unsigned i=0; format[i] !=0; i++){
+    switch(format[i]){
 
-  for(unsigned i=0; format[i] !=0; i++)
-    format[i] = tolower(format[i]);
-    
-  if(strncmp(format,fichier,strlen(format-1)) == 0){ return 0; }
+      case 'P': 
+        sortie[i]='p';
+        break;
+
+      case 'M':
+        sortie[i]='m';
+        break;
+
+      case 'B':
+        sortie[i]='b';
+        break;
+
+      case 'G':
+        sortie[i]='g';
+        break;
+      
+      default:
+        return -1;
+    }
+  }
+  if(strncmp(sortie,fichier,strlen(sortie-1)) == 0){ return 0; }
   else{ return -1; }
 }//Fin verification_format()
 
@@ -161,7 +180,8 @@ int load_pnm(PNM **image, char* filename) {
   
   for( unsigned i = 0 ; i < 2 && !feof(fp);){ 
 
-    fscanf (fp, "%s", tmp);
+    if(fscanf (fp, "%s", tmp)==0)
+      return -3;
     // enregistre dans la variable commentaire la ligne de commentaire //
     if(strncmp("#",tmp, 1 )==0){
           
@@ -199,17 +219,22 @@ int load_pnm(PNM **image, char* filename) {
     valeur = 1;
   else{
     if(!feof(fp)){
-      fscanf (fp, "%s", tmp);
+      if(fscanf (fp, "%s", tmp)==0)
+        return -3;
       sscanf(tmp, "%u", &valeur);
     }
   }
   *image = cree_image(taille_image[1], taille_image[0], valeur, commentaire, nb_mag);
+
+  if (*image ==NULL)
+    return -1;
       
   for(unsigned i=0 ; i < taille_image[1] ; i++){
 
     for(unsigned j=0 ; j < taille_image[0] && !feof(fp) ; j++){
           
-      fscanf(fp,"%s", tmp);
+      if(fscanf(fp,"%s", tmp)==0)
+        return -3;
       sscanf(tmp, "%u", &valeur);
       if(valeur > (*image)->tot_coul)
         return -3;
@@ -261,37 +286,6 @@ int write_pnm(PNM *image, char* filename) {
   fclose(fp);
   return 0;
 }//Fin write_pnm
-
-void gestion_option(char *optstring, char *format, char *entree, char *sortie , int argc, char *argv[]){
-  assert(optstring != NULL && format != NULL && entree != NULL && sortie != NULL);
-
-  printf("\n");
-
-  int val;
-
-  while((val=getopt(argc, argv, optstring))!=EOF){
-    switch(val){
-      case 'f':
-        printf("format: %s\n",optarg);  
-        memcpy(format, optarg, strlen(optarg)+1);
-        break;
-      case 'i':
-        printf("entree: %s\n", optarg);
-        memcpy(entree, optarg, strlen(optarg)+1);
-        break;
-      case 'o':
-        printf("sortie: %s\n", optarg); 
-        memcpy(sortie, optarg, strlen(optarg)+1);
-        break;
-      case '?':
-        printf("unknown option: %c\n", optopt); break;
-      case ':':
-        printf("missing arg: %c\n", optopt); break;
-    }//fin switch
-  }//fin while
-
-  printf("\n");
-}//Fin gestion_option()
 
 int verifie_sortie(char *sortie){
   assert(sortie !=NULL);

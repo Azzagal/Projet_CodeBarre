@@ -19,19 +19,19 @@ static void test_cree_image(){
 
     detruit_image(image);
  }// Fin test_cree_image()
-/*
+
 static void test_verification_format(){
 
     char *s0 ="/home/pierre/Documents/Projet/PNM/exemples_images/washington.pbm";
-    char *s1 ="home/cake/bunny/file.pgmm";
-    char *s2 ="home/cake/bunny/file.ppmm";
+    char *s1 ="home/cake/bunny/file.pgm";
+    char *s2 ="home/cake/bunny/file.ppm";
 
     assert_int_equal(0,verification_format("PBM",s0));
     assert_int_equal(0,verification_format("PGM",s1));
     assert_int_equal(0,verification_format("PPM",s2));
 
 }// fin test_verification_format()
-*/
+
 static void test_verifie_sortie(){
 
     char *s0 ="Ce dossier ci";
@@ -59,7 +59,7 @@ static void test_fixture(){
     test_fixture_start();
 
     run_test(test_cree_image);
-    //run_test(test_verification_format);
+    run_test(test_verification_format);
     run_test(test_verifie_sortie);
 
     test_fixture_end();
