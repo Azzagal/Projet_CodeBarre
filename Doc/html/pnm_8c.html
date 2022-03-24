@@ -1,0 +1,483 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Référence du fichier pnm.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier pnm.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="pnm_8h_source.html">pnm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_gest_opt_8h_source.html">GestOpt.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de pnm.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="pnm_8c__incl.png" border="0" usemap="#pnm_8c" alt=""/></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_n_m__t.html">PNM_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ae287d0c32b1d7ab14d50d03a68f9694e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pnm_8c.html#ae287d0c32b1d7ab14d50d03a68f9694e">detruit_image</a> (<a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *image)</td></tr>
+<tr class="memdesc:ae287d0c32b1d7ab14d50d03a68f9694e"><td class="mdescLeft">&#160;</td><td class="mdescRight">retire la mémoire allouée pour la structure PNM  <a href="pnm_8c.html#ae287d0c32b1d7ab14d50d03a68f9694e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae287d0c32b1d7ab14d50d03a68f9694e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab474bb066abef401382bb20cfa0b2da9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pnm_8c.html#ab474bb066abef401382bb20cfa0b2da9">cree_image</a> (unsigned lignes, unsigned colonnes, unsigned tot_coul, char *commentaire, char *type)</td></tr>
+<tr class="memdesc:ab474bb066abef401382bb20cfa0b2da9"><td class="mdescLeft">&#160;</td><td class="mdescRight">alloue de la mémoire pour une image.  <a href="pnm_8c.html#ab474bb066abef401382bb20cfa0b2da9">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab474bb066abef401382bb20cfa0b2da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26cacce784466c209ca1fc88060ae061"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pnm_8c.html#a26cacce784466c209ca1fc88060ae061">verification_format</a> (char *format, char *fichier)</td></tr>
+<tr class="memdesc:a26cacce784466c209ca1fc88060ae061"><td class="mdescLeft">&#160;</td><td class="mdescRight">vérifie la correspondance d'un format avec un fichier.  <a href="pnm_8c.html#a26cacce784466c209ca1fc88060ae061">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a26cacce784466c209ca1fc88060ae061"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf533a1bc155f9ee83d90c5a1564468f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pnm_8c.html#adf533a1bc155f9ee83d90c5a1564468f">load_pnm</a> (<a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> **image, char *filename)</td></tr>
+<tr class="memdesc:adf533a1bc155f9ee83d90c5a1564468f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charge une image PNM depuis un fichier.  <a href="pnm_8c.html#adf533a1bc155f9ee83d90c5a1564468f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adf533a1bc155f9ee83d90c5a1564468f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af899a2931ee1eaa8ecb6a313710ff228"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pnm_8c.html#af899a2931ee1eaa8ecb6a313710ff228">write_pnm</a> (<a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *image, char *filename)</td></tr>
+<tr class="separator:af899a2931ee1eaa8ecb6a313710ff228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee0556b220a6f52ab7a25095ff814c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pnm_8c.html#aeee0556b220a6f52ab7a25095ff814c9">verifie_sortie</a> (char *sortie)</td></tr>
+<tr class="memdesc:aeee0556b220a6f52ab7a25095ff814c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie que la chaine de caratères passée en argument ne contient pas de caratères interdits. Soit / \ : * ? " &lt; &gt; |.  <a href="pnm_8c.html#aeee0556b220a6f52ab7a25095ff814c9">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aeee0556b220a6f52ab7a25095ff814c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab19f6ef15cd0e78d5d34c62159a09882"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pnm_8c.html#ab19f6ef15cd0e78d5d34c62159a09882">acces_type</a> (<a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *image)</td></tr>
+<tr class="memdesc:ab19f6ef15cd0e78d5d34c62159a09882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Donne accès au champ type de la structure de donnée PNM.  <a href="pnm_8c.html#ab19f6ef15cd0e78d5d34c62159a09882">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab19f6ef15cd0e78d5d34c62159a09882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82b0c31b7856eeb370c33b5983f7de8d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pnm_8c.html#a82b0c31b7856eeb370c33b5983f7de8d">acces_commentaire</a> (<a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *image)</td></tr>
+<tr class="memdesc:a82b0c31b7856eeb370c33b5983f7de8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Donne accès au champ commentaire de la structure de donnée PNM.  <a href="pnm_8c.html#a82b0c31b7856eeb370c33b5983f7de8d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a82b0c31b7856eeb370c33b5983f7de8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f2b62e42df2f54a51302167e2be374"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pnm_8c.html#ab1f2b62e42df2f54a51302167e2be374">acces_tot_coul</a> (<a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *image)</td></tr>
+<tr class="memdesc:ab1f2b62e42df2f54a51302167e2be374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Donne accès au champ tot_coul de la structure de donnée PNM.  <a href="pnm_8c.html#ab1f2b62e42df2f54a51302167e2be374">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab1f2b62e42df2f54a51302167e2be374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a929c827bbce1bfda5b49f42f612470c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pnm_8c.html#a929c827bbce1bfda5b49f42f612470c7">acces_colonnes</a> (<a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *image)</td></tr>
+<tr class="memdesc:a929c827bbce1bfda5b49f42f612470c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Donne accès au champ colonnes de la structure de donnée PNM.  <a href="pnm_8c.html#a929c827bbce1bfda5b49f42f612470c7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a929c827bbce1bfda5b49f42f612470c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26f600795910e5bfbfdc399aea58983c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pnm_8c.html#a26f600795910e5bfbfdc399aea58983c">acces_lignes</a> (<a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *image)</td></tr>
+<tr class="memdesc:a26f600795910e5bfbfdc399aea58983c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Donne accès au champ lignes de la structure de donnée PNM.  <a href="pnm_8c.html#a26f600795910e5bfbfdc399aea58983c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a26f600795910e5bfbfdc399aea58983c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a929c827bbce1bfda5b49f42f612470c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a929c827bbce1bfda5b49f42f612470c7">&#9670;&nbsp;</a></span>acces_colonnes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int acces_colonnes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Donne accès au champ colonnes de la structure de donnée PNM. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>un pointeur sur PNM.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la fonction retourne le nombre de colonnes de l'image </dd></dl>
+
+</div>
+</div>
+<a id="a82b0c31b7856eeb370c33b5983f7de8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82b0c31b7856eeb370c33b5983f7de8d">&#9670;&nbsp;</a></span>acces_commentaire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * acces_commentaire </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Donne accès au champ commentaire de la structure de donnée PNM. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>un pointeur sur PNM.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la fonction retourne le commentaire de l'image </dd></dl>
+
+</div>
+</div>
+<a id="a26f600795910e5bfbfdc399aea58983c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26f600795910e5bfbfdc399aea58983c">&#9670;&nbsp;</a></span>acces_lignes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int acces_lignes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Donne accès au champ lignes de la structure de donnée PNM. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>un pointeur sur PNM.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la fonction retourne le nombre de lignes de l'image </dd></dl>
+
+</div>
+</div>
+<a id="ab1f2b62e42df2f54a51302167e2be374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1f2b62e42df2f54a51302167e2be374">&#9670;&nbsp;</a></span>acces_tot_coul()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int acces_tot_coul </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Donne accès au champ tot_coul de la structure de donnée PNM. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>un pointeur sur PNM.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la fonction retourne le nombre totale de couleur de l'image </dd></dl>
+
+</div>
+</div>
+<a id="ab19f6ef15cd0e78d5d34c62159a09882"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab19f6ef15cd0e78d5d34c62159a09882">&#9670;&nbsp;</a></span>acces_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * acces_type </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Donne accès au champ type de la structure de donnée PNM. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>un pointeur sur PNM.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la fonction retourne le type de l'image </dd></dl>
+
+</div>
+</div>
+<a id="ab474bb066abef401382bb20cfa0b2da9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab474bb066abef401382bb20cfa0b2da9">&#9670;&nbsp;</a></span>cree_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> * cree_image </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>lignes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>colonnes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>tot_coul</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>commentaire</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>alloue de la mémoire pour une image. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lignes</td><td>est le nombre de lignes à allouer à l'image. </td></tr>
+    <tr><td class="paramname">colonnes</td><td>est le nombre de colonnes à allouer à l'image. </td></tr>
+    <tr><td class="paramname">tot_coul</td><td>est le nombre maximal de couleurs de l'image. </td></tr>
+    <tr><td class="paramname">commentaire</td><td>est la ligne de commentaire de l'image si il y en a une. </td></tr>
+    <tr><td class="paramname">type</td><td>est le type de l'image.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>: L'image avec l'espace mémoire alloué Null si il y a eu un problème </dd></dl>
+
+</div>
+</div>
+<a id="ae287d0c32b1d7ab14d50d03a68f9694e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae287d0c32b1d7ab14d50d03a68f9694e">&#9670;&nbsp;</a></span>detruit_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void detruit_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>retire la mémoire allouée pour la structure PNM </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>est la structure à laquelle on veut retirer la mémoire </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adf533a1bc155f9ee83d90c5a1564468f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf533a1bc155f9ee83d90c5a1564468f">&#9670;&nbsp;</a></span>load_pnm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int load_pnm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> **&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Charge une image PNM depuis un fichier. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>l'adresse d'un pointeur sur PNM à laquelle écrire l'adresse de l'image chargée. </td></tr>
+    <tr><td class="paramname">filename</td><td>le chemin vers le fichier contenant l'image.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>: 0 Succès -1 Erreur à l'allocation de mémoire -2 Nom du fichier malformé -3 Contenu du fichier malformé </dd></dl>
+
+</div>
+</div>
+<a id="a26cacce784466c209ca1fc88060ae061"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26cacce784466c209ca1fc88060ae061">&#9670;&nbsp;</a></span>verification_format()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int verification_format </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>fichier</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>vérifie la correspondance d'un format avec un fichier. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>est le format à retrouver dans un fichier. </td></tr>
+    <tr><td class="paramname">fichier</td><td>est un fichier avec le format pbm, pgm ou ppm.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>: 0 Succès -1 le format est différent du format du fichier </dd></dl>
+
+</div>
+</div>
+<a id="aeee0556b220a6f52ab7a25095ff814c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeee0556b220a6f52ab7a25095ff814c9">&#9670;&nbsp;</a></span>verifie_sortie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int verifie_sortie </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>sortie</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérifie que la chaine de caratères passée en argument ne contient pas de caratères interdits. Soit / \ : * ? " &lt; &gt; |. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sortie</td><td>est la chaine de caratères à vérifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>: 0 Succès -1 sortie contient au moins un des caratères interdits. </dd></dl>
+
+</div>
+</div>
+<a id="af899a2931ee1eaa8ecb6a313710ff228"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af899a2931ee1eaa8ecb6a313710ff228">&#9670;&nbsp;</a></span>write_pnm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int write_pnm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

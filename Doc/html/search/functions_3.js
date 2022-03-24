@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gestion_5foption_23',['gestion_option',['../d2/d4f/pnm_8h.html#ad76dbb4b89727e0a47cd473f291b95b6',1,'pnm.c']]]
+  ['detruit_5fimage_104',['detruit_image',['../pnm_8c.html#ae287d0c32b1d7ab14d50d03a68f9694e',1,'detruit_image(PNM *image):&#160;pnm.c'],['../pnm_8h.html#ae287d0c32b1d7ab14d50d03a68f9694e',1,'detruit_image(PNM *image):&#160;pnm.c']]]
 ];

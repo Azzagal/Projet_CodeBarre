@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['verification_5fformat_12',['verification_format',['../d2/d4f/pnm_8h.html#a26cacce784466c209ca1fc88060ae061',1,'pnm.c']]],
-  ['verifie_5fsortie_13',['verifie_sortie',['../d2/d4f/pnm_8h.html#aeee0556b220a6f52ab7a25095ff814c9',1,'pnm.c']]]
+  ['lignes_37',['lignes',['../struct_p_n_m__t.html#a82a44bf24bf0e04d002caf2d20cce322',1,'PNM_t']]],
+  ['load_5fpnm_38',['load_pnm',['../pnm_8c.html#adf533a1bc155f9ee83d90c5a1564468f',1,'load_pnm(PNM **image, char *filename):&#160;pnm.c'],['../pnm_8h.html#adf533a1bc155f9ee83d90c5a1564468f',1,'load_pnm(PNM **image, char *filename):&#160;pnm.c']]]
 ];
