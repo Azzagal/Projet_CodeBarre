@@ -16,5 +16,14 @@
 #include <string.h>
 
 #include "codebarre.h"
-#include "libpnm.a"
 
+
+void int_vers_binaire(int entree, unsigned n,int *sortie){
+    assert(sortie !=NULL);
+
+    for(int i=0; n>0 ;i++){
+        sortie[i] = entree %2;
+        entree/=2;
+        n--;
+    }
+}//Fin int_vers_binaire()

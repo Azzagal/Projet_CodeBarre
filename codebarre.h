@@ -13,4 +13,16 @@
 #ifndef __CODEBARRE__
 #define __CODEBARRE__
 
+/**
+ * \fn void int_vers_binaire(int entree, unsigned n,int *sortie)
+ * 
+ * \brief Transforme un nombre entier vers un nombre binaire
+ * 
+ * \param entree un nombre entier.
+ * \param n le nombre de bit du nombre en binaire.
+ * \param sortie un tableau d'entier contenant le nombre bianire de sortie
+ * 
+ */
+void int_vers_binaire(int entree, unsigned n,int *sortie);
+
 #endif // __CODEBARRE__
