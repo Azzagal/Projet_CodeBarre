@@ -363,3 +363,13 @@ int acces_lignes(PNM *image){
   assert(image !=NULL);
   return image->lignes;
 }
+
+int acces_matrice(PNM *image, unsigned ligne, unsigned colonne){
+  assert(image != NULL);
+  return image->matrice[ligne][colonne];
+}
+
+void defini_matrice(PNM *image, unsigned ligne, unsigned colonne, unsigned val){
+  assert(image != NULL);
+  image->matrice[ligne][colonne] = val;
+}

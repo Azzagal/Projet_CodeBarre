@@ -78,6 +78,33 @@ int acces_colonnes(PNM *image);
 int acces_lignes(PNM *image);
 
 /**
+ * \fn int acces_matrice(PNM *image, unsigned ligne, unsigned colonne)
+ * 
+ * \brief Donne accès à l'indice ligne,colonne de la matrice de la structure PNM
+ * 
+ * \param image un pointeur sur PNM.
+ * \param ligne l'indice de ligne de valeur à retourner
+ * \param colonne l'indice de colonne de valeur à retourner
+ * 
+ * \return la fonction retourne la valeur à l'emplacement ligne,colonne de la matrice
+ */
+int acces_matrice(PNM *image, unsigned ligne, unsigned colonne);
+
+/**
+ * \fn void defini_matrice(PNM *image, unsigned ligne, unsigned colonne, unsigned val)
+ * 
+ * \brief Place une valeur à l'indice ligne,colonne de la matrice de la structure PNM
+ * 
+ * \param image un pointeur sur PNM.
+ * \param ligne l'indice de ligne de valeur à retourner
+ * \param colonne l'indice de colonne de valeur à retourner
+ * \param val une valeur entière
+ * 
+ * \return la fonction place la valeur de val dans lamatrice à l'emplacement ligne,colonne
+ */
+void defini_matrice(PNM *image, unsigned ligne, unsigned colonne, unsigned val);
+
+/**
  * \fn int load_pnm(PNM **image, char* filename)
  *
  * \brief Charge une image PNM depuis un fichier.
