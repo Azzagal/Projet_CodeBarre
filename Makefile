@@ -21,13 +21,13 @@ OBJECTS=codebarre.o pnm.o seatest.o codebarre-test.o pnm-test.o
 all: $(EXEC)
 
 clean:
-	rm -f *.o $(EXEC) *.a *~
+	rm -f *.o $(EXEC) $(EXEC_TEST) *.a *~
 
 doc:
 	$(DOXYGEN) Doc/Doxyfile
 
-test: $(OBJECTS)
-	$(LD) -o $(EXEC_TEST) $(OBJECTS) $(LDFLAGS)
+test: 
+	$(LD) -o $(EXEC_TEST) $(MODULES) -L. -lpnm -lm
 
 lib: libpnm.a libgest.a
 	
@@ -59,9 +59,9 @@ GestOpt.o: GestOpt.c
 	$(CC) -c GestOpt.c -o GestOpt.o $(CFLAGS)
 
 libpnm.a: pnm.o
-	$(AR) ruv $@ $?
+	$(AR) -rc $@ $^
 	$(RANLIB) $@
 
 libgest.a: GestOpt.o
-	$(AR) ruv $@ $?
+	$(AR) -rc $@ $^
 	$(RANLIB) $@	
