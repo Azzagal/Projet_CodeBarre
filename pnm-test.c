@@ -6,7 +6,6 @@
  * Test de la fonction cree_image
  * 
 **/
- 
 static void test_cree_image(){
 
     PNM *image = cree_image(15,25,255,"Ceci n'est pas une image","PBM");
@@ -20,6 +19,11 @@ static void test_cree_image(){
     detruit_image(image);
  }// Fin test_cree_image()
 
+/**
+ * 
+ * Test de la fonction verification_format
+ * 
+**/
 static void test_verification_format(){
 
     char *s0 ="/home/pierre/Documents/Projet/PNM/exemples_images/washington.pbm";
@@ -32,6 +36,11 @@ static void test_verification_format(){
 
 }// fin test_verification_format()
 
+/**
+ * 
+ * Test de la fonction verifie_sortie
+ * 
+**/
 static void test_verifie_sortie(){
 
     char *s0 ="Ce dossier ci";
