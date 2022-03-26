@@ -19,11 +19,22 @@ static void test_int_vers_binaire(){
 
  }// Fin test_cree_image()
 
- static void test_fixture(){
+static void test_verifie_matricule(){
+
+    char *f1 ="20100749";
+    char *f2 ="2010074954641";
+    char *f3 ="Salut tout le monde";
+
+    assert_int_equal(0,verifie_matricule(f1));
+    assert_int_equal(-2,verifie_matricule(f2));
+    assert_int_equal(-1,verifie_matricule(f3));
+}
+
+static void test_fixture(){
     test_fixture_start();
 
     run_test(test_int_vers_binaire);
-
+    run_test(test_verifie_matricule);
     test_fixture_end();
 }
 
