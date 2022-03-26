@@ -15,8 +15,9 @@ TARNAME=3
 AR=ar
 RANLIB=ranlib
 DOXYGEN=doxygen
-MODULES=codebarre.c pnm.c seatest.c codebarre-test.c pnm-test.c
+MODULES=codebarre.c seatest.c codebarre-test.c
 OBJECTS=codebarre.o pnm.o seatest.o codebarre-test.o pnm-test.o
+#-L. -lpnm -lm
 
 all: $(EXEC)
 
@@ -27,7 +28,7 @@ doc:
 	$(DOXYGEN) Doc/Doxyfile
 
 test: 
-	$(LD) -o $(EXEC_TEST) $(MODULES) -L. -lpnm -lm
+	$(LD) -o $(EXEC_TEST) $(MODULES)
 
 lib: libpnm.a libgest.a
 	
