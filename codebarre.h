@@ -20,7 +20,7 @@
  * 
  * \param entree un nombre entier.
  * \param n le nombre de bit du nombre en binaire.
- * \param sortie un tableau d'entier contenant le nombre bianire de sortie
+ * \param sortie un tableau d'entier contenant le nombre bianire de sortie.
  * 
  */
 void int_vers_binaire(int entree, unsigned n,int *sortie);
@@ -35,9 +35,24 @@ void int_vers_binaire(int entree, unsigned n,int *sortie);
  * \return 
  *      0 Succès.
  *      -1 Le matricule est maformé.
- *      -2 Le matricule est trop long.
+ *      -2 Le matricule n'a pas la bonne taille.
  */
 int verifie_matricule(char *entree);
+
+/**
+ * \fn void multiplie_matricule(PNM *image, unsigned valeur ,unsigned borneInf, unsigned taille)
+ * 
+ * \brief Donne la forme d'un matrice taille x taille à la valeur dans la matrice de l'image depuis
+ *        borneInf comme départ.
+ * 
+ * \param image un pointeur sur PNM.
+ * \param valeur la valeur à recopié dans la matrice.
+ * \param borneLigne l'indice de ligne où commencer la matrice.
+ * \param borneColonne l'indice de ligne où commencer la matrice.
+ * \param taille la taille de la matrice carrée.
+ * 
+ */
+void multiplie_matricule(PNM *image, unsigned valeur ,unsigned borneLigne, unsigned borneColonne ,unsigned taille);
 
 /**
  * \fn int charge_matricule(char* fichier)

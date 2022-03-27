@@ -16,7 +16,7 @@
 #include <string.h>
 
 #include "codebarre.h"
-//#include "libpnm.a"
+#include "pnm.h"
 
 void int_vers_binaire(int entree, unsigned n,int *sortie){
     assert(sortie !=NULL);
@@ -31,6 +31,8 @@ void int_vers_binaire(int entree, unsigned n,int *sortie){
 int verifie_matricule(char *entree){
     assert(entree!=NULL);
 
+    // compte le nombre de chiffre du matricule
+    unsigned compteur=0;
     for(unsigned i = 0; entree[i]!= 0;i++){
 
         switch(entree[i]){
@@ -58,11 +60,25 @@ int verifie_matricule(char *entree){
             default:
                 return -1;            
         }
-        if(i > 7)
-            return -2;
+        compteur++;
     }
+    if(compteur!=7)
+        return -2;
     return 0;
 }//Fin int verifie_matricule()
+
+void multiplie_matricule(PNM *image, unsigned valeur ,unsigned borneLigne, unsigned borneColonne, unsigned taille){
+    assert(image!=NULL);
+    
+    unsigned finL = borneLigne + taille;
+    unsigned finC = borneColonne + taille;
+    for(unsigned i = borneLigne; i< finL;i++){
+
+        for(unsigned j = borneColonne;j< finC;j++){
+            defini_matrice(image,i,j,valeur);
+        }
+    }
+}
 
 int charge_matricule(char* fichier){
     assert(fichier!=NULL);
@@ -76,6 +92,7 @@ int charge_matricule(char* fichier){
     char *tmp;
     int matriculeDec;
     int matriculeBi[36];
+    PNM *codebarre = cree_image(700,700,1,"","PBM");
     
     for(;!feof(fp);){
         // Vérification de la validité du matricule
@@ -85,8 +102,9 @@ int charge_matricule(char* fichier){
         sscanf(tmp, "%u", &matriculeDec);
         int_vers_binaire(matriculeDec,36,matriculeBi);
         
+        for(unsigned i=0;matriculeBi[i]!=NULL;i++){
+
+        }
     }
-
-
     return 0;
 }//Fin int charge_matricule()
