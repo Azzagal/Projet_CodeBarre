@@ -16,8 +16,7 @@ AR=ar
 RANLIB=ranlib
 DOXYGEN=doxygen
 MODULES=codebarre.c seatest.c codebarre-test.c
-OBJECTS=codebarre.o pnm.o seatest.o codebarre-test.o pnm-test.o
-#-L. -lpnm -lm
+OBJECTS=codebarre.o pnm.o seatest.o codebarre-test.o pnm-test.o 
 
 all: $(EXEC)
 
@@ -36,7 +35,7 @@ archive:
 	$(TAR) cvf $(TARNAME) Makefile Makefile.compilation Code/ Rapport/
 
 $(EXEC): main.o codebarre.o
-	$(LD) -o $(EXEC) main.o codebarre.o $(LDFLAGS)
+	$(LD) -o $(EXEC) main.o codebarre.o $(LDFLAGS) -L. -lpnm -L. -lgest
 
 #$(EXEC_TEST): $(OBJECTS)
 #	$(LD) -o $(EXEC_TEST) $(OBJECTS) $(LDFLAGS)
