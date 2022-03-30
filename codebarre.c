@@ -58,12 +58,15 @@ int verifie_matricule(char *entree){
             case '9':
                 break;
             default:
+                printf("[ERREUR]: Matricule contenant un caractère différent d'un chiffre\n");
                 return -1;            
         }
         compteur++;
     }
-    if(compteur!=7)
+    if(compteur!=7){
+        printf("[ERREUR]: Matricule trop long ou trop petit\n");
         return -2;
+    }
     return 0;
 }//Fin int verifie_matricule()
 
@@ -80,31 +83,48 @@ void multiplie_matricule(PNM *image, unsigned valeur ,unsigned borneLigne, unsig
     }
 }
 
-int charge_matricule(char* fichier){
+int charge_matricule(char* fichier, char* dossier_output){
     assert(fichier!=NULL);
 
-    FILE *fp;
-    fp = fopen(fichier,"r");
+    FILE *fp = fopen(fichier,"r");
    
-    if(fp==NULL)
+    if(fp==NULL){
+        printf("ici\n");
         return -1;
-
-    char *tmp;
+}
+    char tmp[100];
     int matriculeDec;
     int matriculeBi[36];
     PNM *codebarre = cree_image(700,700,1,"","PBM");
+    unsigned partite = 0;
+    unsigned borneLigne = 0;
+    unsigned borneColonne = 0;
+    char *nom_fichier = "Matricule_";
     
     for(;!feof(fp);){
         // Vérification de la validité du matricule
         if(fscanf (fp, "%s", tmp)==0 || verifie_matricule(tmp)!=0)
             return -1;
         // Récupération du matricule et conversion en bianire
-        sscanf(tmp, "%u", &matriculeDec);
+        sscanf(tmp, "%d", &matriculeDec);
         int_vers_binaire(matriculeDec,36,matriculeBi);
         
         for(unsigned i=0;matriculeBi[i]!=NULL;i++){
-
+            if(!i%7 && i!=0){
+                multiplie_matricule(codebarre,partite%2,borneLigne,borneColonne,10);
+                borneLigne = 0;
+                borneColonne += 10;
+                partite = 0;
+            }
+            multiplie_matricule(codebarre,matriculeBi[i],borneLigne,borneColonne,10);
+            borneLigne += 10;
+            partite += matriculeBi[i];
         }
+        strcat(dossier_output,nom_fichier);
+        strcat(dossier_output,(char *)matriculeDec);
+        write_pnm(codebarre,dossier_output);
     }
+    detruit_image(codebarre);
+    fclose(fp);
     return 0;
 }//Fin int charge_matricule()

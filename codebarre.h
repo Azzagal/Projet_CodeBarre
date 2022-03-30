@@ -9,7 +9,7 @@
  * @date:27/02/2022
  * @projet: INFO0030 Projet 2
  */
-
+#include"pnm.h"
 #ifndef __CODEBARRE__
 #define __CODEBARRE__
 
@@ -60,12 +60,13 @@ void multiplie_matricule(PNM *image, unsigned valeur ,unsigned borneLigne, unsig
  * \brief Charge les matricules depuis un fichier
  * 
  * \param fichier Le nom du fichier où se trouve les matricules
+ * \param dossier_output Le nom du dossier où se trouve les codebarres
  * 
  * \return
  *      0 Succès
  *      -1 Problème au chargement des matricules
  * 
  */
-int charge_matricule(char* fichier);
+int charge_matricule(char* fichier,char* dossier_output);
 
 #endif // __CODEBARRE__
