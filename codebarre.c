@@ -6,7 +6,7 @@
  * PNM.
  *
  * @author: Lorenzen Pierre s203724
- * @date: 27/02/2022
+ * @date: 31/03/2022
  * @projet: INFO0030 Projet 2
 **/
 
@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <string.h>
+#include <sys/stat.h>
 
 #include "codebarre.h"
 #include "pnm.h"
@@ -63,7 +64,7 @@ int verifie_matricule(char *entree){
         }
         compteur++;
     }
-    if(compteur!=7){
+    if(compteur!=8){
         printf("[ERREUR]: Matricule trop long ou trop petit\n");
         return -2;
     }
@@ -91,16 +92,17 @@ int charge_matricule(char* fichier, char* dossier_output){
     if(fp==NULL){
         printf("ici\n");
         return -1;
-}
+    }
     char tmp[100];
     int matriculeDec;
     int matriculeBi[36];
-    PNM *codebarre = cree_image(700,700,1,"","PBM");
-    unsigned partite = 0;
+    PNM *codebarre = cree_image(70,70,1,"","P1");
+    unsigned parite = 0;
     unsigned borneLigne = 0;
     unsigned borneColonne = 0;
-    char *nom_fichier = "Matricule_";
-    
+    char nom_fichier[200];
+    mkdir(dossier_output,0777);
+
     for(;!feof(fp);){
         // Vérification de la validité du matricule
         if(fscanf (fp, "%s", tmp)==0 || verifie_matricule(tmp)!=0)
@@ -109,20 +111,53 @@ int charge_matricule(char* fichier, char* dossier_output){
         sscanf(tmp, "%d", &matriculeDec);
         int_vers_binaire(matriculeDec,36,matriculeBi);
         
-        for(unsigned i=0;matriculeBi[i]!=NULL;i++){
-            if(!i%7 && i!=0){
-                multiplie_matricule(codebarre,partite%2,borneLigne,borneColonne,10);
-                borneLigne = 0;
+        for(unsigned i=0;i<36;i++){
+            if(i%6==0 && i!=0){
+                multiplie_matricule(codebarre,parite%2,borneLigne,borneColonne,10);
+                borneLigne += 10;
+                borneColonne = 0;
+                parite = 0;
+                multiplie_matricule(codebarre,matriculeBi[i],borneLigne,borneColonne,10);
                 borneColonne += 10;
-                partite = 0;
+                parite += matriculeBi[i];
             }
-            multiplie_matricule(codebarre,matriculeBi[i],borneLigne,borneColonne,10);
-            borneLigne += 10;
-            partite += matriculeBi[i];
+            else{
+                multiplie_matricule(codebarre,matriculeBi[i],borneLigne,borneColonne,10);
+                borneColonne += 10;
+                parite += matriculeBi[i];
+            }
         }
-        strcat(dossier_output,nom_fichier);
-        strcat(dossier_output,(char *)matriculeDec);
-        write_pnm(codebarre,dossier_output);
+        parite = 0;
+        borneColonne = 0;
+        borneLigne = 60; 
+        
+        for(unsigned j =0;j<6;j++){
+            for(unsigned i=0;i<=41;i++){
+                if((i-j)%6==0 && (i-j)!=36)
+                    parite += matriculeBi[i];
+                if(i-j==36){
+                    multiplie_matricule(codebarre,parite%2,borneLigne,borneColonne,10);
+                    borneColonne+=10;
+                    parite =0;
+                }
+
+            }
+        }
+        borneLigne = 0;
+        borneColonne = 0;
+        
+        strcpy(nom_fichier,dossier_output);
+        strcat(nom_fichier,"/Matricule_");
+        strcat(nom_fichier,tmp);
+        strcat(nom_fichier,".pbm");
+        switch(write_pnm(codebarre,nom_fichier)){
+
+            case -1:
+                printf("[ERREUR] Nom de fichier malformé\n");
+                break;
+            case -2:
+                printf("[ERREUR] lors de la création de l'image\n");
+        }
     }
     detruit_image(codebarre);
     fclose(fp);
