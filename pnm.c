@@ -5,7 +5,7 @@
  * les fonctions de manipulation d'images PNM.
  *
  * @author: Lorenzen Pierre s203724
- * @date: 23/03/2022
+ * @date: 31/03/2022
  * @projet: INFO0030 Projet 2
  */
 
@@ -295,10 +295,6 @@ int verifie_sortie(char *sortie){
   for(unsigned i=0; sortie[i]!=0 && erreur!= -1; i++){
 
     switch(sortie[i]){
-
-      case '/' : 
-        erreur =-1;
-        break;
     
       case ':' : 
         erreur =-1;
