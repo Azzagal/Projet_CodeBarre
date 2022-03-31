@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_111',['main',['../pnm-test_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'pnm-test.c']]]
+  ['load_5fpnm_122',['load_pnm',['../pnm_8c.html#adf533a1bc155f9ee83d90c5a1564468f',1,'load_pnm(PNM **image, char *filename):&#160;pnm.c'],['../pnm_8h.html#adf533a1bc155f9ee83d90c5a1564468f',1,'load_pnm(PNM **image, char *filename):&#160;pnm.c']]]
 ];

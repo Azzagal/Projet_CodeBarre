@@ -61,6 +61,8 @@ $(function() {
 
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
   <div class="headertitle">
 <div class="title">Référence du fichier codebarre.c</div>  </div>
 </div><!--header-->
@@ -69,14 +71,183 @@ $(function() {
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;assert.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="codebarre_8h_source.html">codebarre.h</a>&quot;</code><br />
-<code>#include &quot;libpnm.a&quot;</code><br />
+<code>#include &quot;<a class="el" href="pnm_8h_source.html">pnm.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de codebarre.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="codebarre_8c__incl.png" border="0" usemap="#codebarre_8c" alt=""/></div>
 </div>
-</div></div><!-- contents -->
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a7f998121f1d10401188c3d51df7b25d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="codebarre_8c.html#a7f998121f1d10401188c3d51df7b25d0">int_vers_binaire</a> (int entree, unsigned n, int *sortie)</td></tr>
+<tr class="memdesc:a7f998121f1d10401188c3d51df7b25d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforme un nombre entier vers un nombre binaire.  <a href="codebarre_8c.html#a7f998121f1d10401188c3d51df7b25d0">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7f998121f1d10401188c3d51df7b25d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9fdb8bbeec925ccc51d767216f37d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="codebarre_8c.html#a2e9fdb8bbeec925ccc51d767216f37d3">verifie_matricule</a> (char *entree)</td></tr>
+<tr class="memdesc:a2e9fdb8bbeec925ccc51d767216f37d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie que la chaine de caractère est bien une suite de 8 chiffres.  <a href="codebarre_8c.html#a2e9fdb8bbeec925ccc51d767216f37d3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2e9fdb8bbeec925ccc51d767216f37d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa4ecbbadd6cc7c8ef0ae397baab95ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="codebarre_8c.html#aaa4ecbbadd6cc7c8ef0ae397baab95ca">multiplie_matricule</a> (<a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *image, unsigned valeur, unsigned borneLigne, unsigned borneColonne, unsigned taille)</td></tr>
+<tr class="separator:aaa4ecbbadd6cc7c8ef0ae397baab95ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e194c629d7bdc70b4947c8d5835e315"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="codebarre_8c.html#a8e194c629d7bdc70b4947c8d5835e315">charge_matricule</a> (char *fichier, char *dossier_output)</td></tr>
+<tr class="separator:a8e194c629d7bdc70b4947c8d5835e315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a8e194c629d7bdc70b4947c8d5835e315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e194c629d7bdc70b4947c8d5835e315">&#9670;&nbsp;</a></span>charge_matricule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int charge_matricule </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>fichier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dossier_output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f998121f1d10401188c3d51df7b25d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f998121f1d10401188c3d51df7b25d0">&#9670;&nbsp;</a></span>int_vers_binaire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void int_vers_binaire </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>entree</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>sortie</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transforme un nombre entier vers un nombre binaire. </p>
+<p><a class="el" href="codebarre_8c.html">codebarre.c</a></p>
+<p>Ce fichier contient les définitions de types et les fonctions de création de code barre au format PNM.</p>
+<dl class="section author"><dt>Auteur</dt><dd>: Lorenzen Pierre s203724 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>: 31/03/2022 @projet: INFO0030 Projet 2</dd></dl>
+<p><a class="el" href="codebarre_8h.html">codebarre.h</a></p>
+<p>Ce fichier contient les déclarations de types et les prototypes des fonctions de création de code barre au format PNM.</p>
+<dl class="section author"><dt>Auteur</dt><dd>: Lorenzen Pierre s203724 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>:27/02/2022 @projet: INFO0030 Projet 2</dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entree</td><td>un nombre entier. </td></tr>
+    <tr><td class="paramname">n</td><td>le nombre de bit du nombre en binaire. </td></tr>
+    <tr><td class="paramname">sortie</td><td>un tableau d'entier contenant le nombre bianire de sortie. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaa4ecbbadd6cc7c8ef0ae397baab95ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa4ecbbadd6cc7c8ef0ae397baab95ca">&#9670;&nbsp;</a></span>multiplie_matricule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void multiplie_matricule </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>valeur</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>borneLigne</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>borneColonne</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>taille</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e9fdb8bbeec925ccc51d767216f37d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e9fdb8bbeec925ccc51d767216f37d3">&#9670;&nbsp;</a></span>verifie_matricule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int verifie_matricule </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>entree</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérifie que la chaine de caractère est bien une suite de 8 chiffres. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entree</td><td>le matricule à vérifié.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 Succès. -1 Le matricule est maformé. -2 Le matricule n'a pas la bonne taille. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Généré par &#160;<a href="http://www.doxygen.org/index.html">

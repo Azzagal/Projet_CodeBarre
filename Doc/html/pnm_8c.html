@@ -119,6 +119,12 @@ Fonctions</h2></td></tr>
 <tr class="memitem:a26f600795910e5bfbfdc399aea58983c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pnm_8c.html#a26f600795910e5bfbfdc399aea58983c">acces_lignes</a> (<a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *image)</td></tr>
 <tr class="memdesc:a26f600795910e5bfbfdc399aea58983c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Donne accès au champ lignes de la structure de donnée PNM.  <a href="pnm_8c.html#a26f600795910e5bfbfdc399aea58983c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a26f600795910e5bfbfdc399aea58983c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5949e65c39cd116c4ae5ab5f0541a79e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pnm_8c.html#a5949e65c39cd116c4ae5ab5f0541a79e">acces_matrice</a> (<a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *image, unsigned ligne, unsigned colonne)</td></tr>
+<tr class="memdesc:a5949e65c39cd116c4ae5ab5f0541a79e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Donne accès à l'indice ligne,colonne de la matrice de la structure PNM.  <a href="pnm_8c.html#a5949e65c39cd116c4ae5ab5f0541a79e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5949e65c39cd116c4ae5ab5f0541a79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e0ee8f46cec9bf1b3c98b9c58e1035f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pnm_8c.html#a4e0ee8f46cec9bf1b3c98b9c58e1035f">defini_matrice</a> (<a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *image, unsigned ligne, unsigned colonne, unsigned val)</td></tr>
+<tr class="memdesc:a4e0ee8f46cec9bf1b3c98b9c58e1035f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Place une valeur à l'indice ligne,colonne de la matrice de la structure PNM.  <a href="pnm_8c.html#a4e0ee8f46cec9bf1b3c98b9c58e1035f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4e0ee8f46cec9bf1b3c98b9c58e1035f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des fonctions</h2>
 <a id="a929c827bbce1bfda5b49f42f612470c7"></a>
@@ -199,6 +205,51 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>la fonction retourne le nombre de lignes de l'image </dd></dl>
+
+</div>
+</div>
+<a id="a5949e65c39cd116c4ae5ab5f0541a79e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5949e65c39cd116c4ae5ab5f0541a79e">&#9670;&nbsp;</a></span>acces_matrice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int acces_matrice </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>ligne</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>colonne</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Donne accès à l'indice ligne,colonne de la matrice de la structure PNM. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>un pointeur sur PNM. </td></tr>
+    <tr><td class="paramname">ligne</td><td>l'indice de ligne de valeur à retourner </td></tr>
+    <tr><td class="paramname">colonne</td><td>l'indice de colonne de valeur à retourner</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la fonction retourne la valeur à l'emplacement ligne,colonne de la matrice </dd></dl>
 
 </div>
 </div>
@@ -312,6 +363,58 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>: L'image avec l'espace mémoire alloué Null si il y a eu un problème </dd></dl>
+
+</div>
+</div>
+<a id="a4e0ee8f46cec9bf1b3c98b9c58e1035f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e0ee8f46cec9bf1b3c98b9c58e1035f">&#9670;&nbsp;</a></span>defini_matrice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void defini_matrice </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pnm_8h.html#a5685d2cc86af79912d0d3e882e9640fd">PNM</a> *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>ligne</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>colonne</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Place une valeur à l'indice ligne,colonne de la matrice de la structure PNM. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>un pointeur sur PNM. </td></tr>
+    <tr><td class="paramname">ligne</td><td>l'indice de ligne de valeur à retourner </td></tr>
+    <tr><td class="paramname">colonne</td><td>l'indice de colonne de valeur à retourner </td></tr>
+    <tr><td class="paramname">val</td><td>une valeur entière</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la fonction place la valeur de val dans lamatrice à l'emplacement ligne,colonne </dd></dl>
 
 </div>
 </div>
