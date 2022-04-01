@@ -6,7 +6,7 @@
  * PNM.
  *
  * @author: Lorenzen Pierre s203724
- * @date: 31/03/2022
+ * @date: 01/04/2022
  * @projet: INFO0030 Projet 2
 **/
 
@@ -85,14 +85,12 @@ void multiplie_matricule(PNM *image, unsigned valeur ,unsigned borneLigne, unsig
 }
 
 int charge_matricule(char* fichier, char* dossier_output){
-    assert(fichier!=NULL);
+    assert(fichier!=NULL && dossier_output!= NULL);
 
     FILE *fp = fopen(fichier,"r");
    
-    if(fp==NULL){
-        printf("ici\n");
+    if(fp==NULL)
         return -1;
-    }
     char tmp[100];
     int matriculeDec;
     int matriculeBi[36];
@@ -129,25 +127,26 @@ int charge_matricule(char* fichier, char* dossier_output){
         }
         parite = 0;
         borneColonne = 0;
-        borneLigne = 60; 
+        borneLigne = 0; 
         
-        for(unsigned j =0;j<6;j++){
-            for(unsigned i=0;i<=41;i++){
-                if((i-j)%6==0 && (i-j)!=36)
-                    parite += matriculeBi[i];
-                if(i-j==36){
+        for(unsigned j =0;j<7;j++){
+            for(unsigned i=0;i<7;i++){
+                if(i==6)
                     multiplie_matricule(codebarre,parite%2,borneLigne,borneColonne,10);
-                    borneColonne+=10;
-                    parite =0;
+                else{
+                    parite += acces_matrice(codebarre,borneLigne,borneColonne);
+                    borneLigne += 10;
                 }
-
             }
+            parite = 0;
+            borneLigne = 0;
+            borneColonne += 10;
         }
-        borneLigne = 0;
         borneColonne = 0;
+        borneLigne = 0;
         
         strcpy(nom_fichier,dossier_output);
-        strcat(nom_fichier,"/Matricule_");
+        strcat(nom_fichier,"/");
         strcat(nom_fichier,tmp);
         strcat(nom_fichier,".pbm");
         switch(write_pnm(codebarre,nom_fichier)){
@@ -163,3 +162,123 @@ int charge_matricule(char* fichier, char* dossier_output){
     fclose(fp);
     return 0;
 }//Fin int charge_matricule()
+
+int corrige_codebarre(char *nom_fichier,char *dossier_output){
+    assert(nom_fichier!=NULL);
+    PNM *codebarre;
+
+    switch(load_pnm(&codebarre, nom_fichier)){
+  
+      case -1 : 
+        printf("[ERREUR] Impossiblilité d'allouer suffisamment de mémoire pour l'image \n");
+        return -1;
+        break; 
+  
+      case -2 :
+        printf("[ERREUR] Mauvais format passé en agrument. Le fichier %s n'est pas du type %s \n",nom_fichier ,"PBM");
+        return -1;
+        break;
+  
+      case -3 :
+        printf("[ERREUR] Le fichier est malformé\n");
+        return -1; 
+        break;
+
+      default:
+        break;
+    }// Fin switch
+    
+    int parite = 0;
+    unsigned borneLigne = 0;
+    unsigned borneColonne = 0;
+    unsigned erreurColonne = 0;
+    unsigned compteurErreurC = 0;
+    //Cherche les erreurs dans les colonnes
+    for(unsigned j =0;j<6;j++){
+        for(unsigned i=0;i<7;i++){
+            if(i==6){
+                if((parite%2)!= acces_matrice(codebarre,borneLigne,borneColonne)){
+                    erreurColonne = borneColonne;
+                    compteurErreurC++;
+                }
+                if(compteurErreurC > 2){
+                    detruit_image(codebarre);
+                    return -2;
+                }
+            }
+            else{
+                parite += acces_matrice(codebarre,borneLigne,borneColonne);
+                borneLigne += 10;
+            }
+        }
+        parite = 0;
+        borneLigne = 0;
+        borneColonne += 10;
+    }
+    
+    borneColonne = 0;
+    borneLigne = 0;
+    unsigned erreurLigne = 0;
+    unsigned compteurErreurL = 0;
+    //Cherche les erreurs dans les lignes
+    for(unsigned j =0;j<6;j++){
+        for(unsigned i=0;i<7;i++){
+            if(i==6){
+                if((parite%2)!= acces_matrice(codebarre,borneLigne,borneColonne)){
+                    erreurLigne = borneLigne;
+                    compteurErreurL++;
+                }
+                if(compteurErreurL > 2){
+                    detruit_image(codebarre);
+                    return -2;
+                }
+            }
+            else{
+                parite += acces_matrice(codebarre,borneLigne,borneColonne);
+                borneColonne += 10;
+            }
+        }
+        parite = 0;
+        borneColonne= 0;
+        borneLigne += 10;
+    }
+
+    //Si la partité d'une ligne ou d'une colonne sont mauvaises
+    if(compteurErreurC || compteurErreurL){
+        //Si la partité d'une ligne et d'une colonne sont mauvaises
+        if(compteurErreurC && compteurErreurL)
+            multiplie_matricule(codebarre,!acces_matrice(codebarre,erreurLigne,erreurColonne),erreurLigne,erreurColonne,10);
+        //Si la partité d'une ligne est mauvaise
+        if(compteurErreurL && compteurErreurC == 0)
+            multiplie_matricule(codebarre,!acces_matrice(codebarre,erreurLigne,60),erreurLigne,60,10);
+        //Si la partité d'une colonne est mauvaise
+        if(compteurErreurC && compteurErreurL == 0)
+            multiplie_matricule(codebarre,!acces_matrice(codebarre,60,erreurColonne),60,erreurColonne,10);
+    }
+    else{
+        compteurErreurL = 0;
+        borneLigne = 60;
+        borneColonne = 0;
+        for(unsigned i=0;i<7;i++){
+            if(i==6){
+                if((parite%2)!= acces_matrice(codebarre,borneLigne,borneColonne)){
+                    erreurLigne = borneLigne;
+                    compteurErreurL++;
+                }
+                if(compteurErreurL > 2){
+                    detruit_image(codebarre);
+                    return -2;
+                }
+            }
+            else{
+                parite += acces_matrice(codebarre,borneLigne,borneColonne);
+                borneColonne += 10;
+            }
+        }
+        if(compteurErreurL)
+            multiplie_matricule(codebarre,!acces_matrice(codebarre,60,60),60,60,10);
+    }
+    write_pnm(codebarre,dossier_output);
+    detruit_image(codebarre);
+    return 0;
+}

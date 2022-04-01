@@ -4,7 +4,7 @@
 #include <string.h>
 #include <assert.h>
 
-void gestion_option(char *optstring, char *format, char *entree, char *sortie , int argc, char *argv[]){
+void gestion_option(char *optstring, char *format, char *entree, char *sortie, char *c, int argc, char *argv[]){
   assert(optstring != NULL && format != NULL && entree != NULL && sortie != NULL);
 
   printf("\n");
@@ -24,6 +24,10 @@ void gestion_option(char *optstring, char *format, char *entree, char *sortie , 
       case 'o':
         printf("sortie: %s\n", optarg); 
         memcpy(sortie, optarg, strlen(optarg)+1);
+        break;
+      case 'c':
+        printf("à corriger: %s\n", optarg); 
+        memcpy(c, optarg, strlen(optarg)+1);
         break;
       case '?':
         printf("unknown option: %c\n", optopt); break;

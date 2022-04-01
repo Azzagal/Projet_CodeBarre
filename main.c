@@ -14,18 +14,36 @@
 int main(int argc, char *argv[]) {
 
     char nom_fichier[200];
-    char sortie[120]; 
+    char sortie[120];
+    char corriger[200]; 
 
-    gestion_option(":f:o:",nom_fichier, "rien", sortie, argc, argv);
+    gestion_option(":f:c:o:",nom_fichier, "rien", sortie,corriger, argc, argv);
 
-    switch(charge_matricule(nom_fichier,sortie)){
-        case 0:
-            printf("Tout à bien fonctionné\n");
-            break;
-        case -1:
-            printf("[ERREUR] Un problème au chargement des matricules est survenu\n");
-            break;
-        default:
-            break;
+    if(nom_fichier!=NULL){
+        switch(charge_matricule(nom_fichier,sortie)){
+            case 0:
+                printf("La création à fonctionné\n");
+                break;
+            case -1:
+                printf("[ERREUR] Un problème au chargement des matricules est survenu\n");
+                break;
+            default:
+                break;
+        }
+    }
+    if(corriger!=NULL){
+        switch(corrige_codebarre(corriger,sortie)){
+            case 0:
+                printf("La correction à fonctionné\n");
+                break;
+            case -1:
+                printf("[ERREUR] Un problème au chargement de l'image\n");
+                break;
+            case -2:
+                printf("[ERREUR] Trop d'erreur dans l'image\n");
+                break;
+            default:
+                break;
+        }
     }
 }
