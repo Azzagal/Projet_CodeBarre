@@ -6,7 +6,7 @@
  * PNM.
  *
  * @author: Lorenzen Pierre s203724
- * @date: 01/04/2022
+ * @date: 02/04/2022
  * @projet: INFO0030 Projet 2
 **/
 
@@ -198,10 +198,11 @@ int corrige_codebarre(char *nom_fichier,char *dossier_output){
         for(unsigned i=0;i<7;i++){
             if(i==6){
                 if((parite%2)!= acces_matrice(codebarre,borneLigne,borneColonne)){
+                    printf("erreur détectée\n");
                     erreurColonne = borneColonne;
                     compteurErreurC++;
                 }
-                if(compteurErreurC > 2){
+                if(compteurErreurC > 1){
                     detruit_image(codebarre);
                     return -2;
                 }
@@ -225,10 +226,11 @@ int corrige_codebarre(char *nom_fichier,char *dossier_output){
         for(unsigned i=0;i<7;i++){
             if(i==6){
                 if((parite%2)!= acces_matrice(codebarre,borneLigne,borneColonne)){
+                    printf("erreur détectée\n");
                     erreurLigne = borneLigne;
                     compteurErreurL++;
                 }
-                if(compteurErreurL > 2){
+                if(compteurErreurL > 1){
                     detruit_image(codebarre);
                     return -2;
                 }
@@ -255,29 +257,29 @@ int corrige_codebarre(char *nom_fichier,char *dossier_output){
         if(compteurErreurC && compteurErreurL == 0)
             multiplie_matricule(codebarre,!acces_matrice(codebarre,60,erreurColonne),60,erreurColonne,10);
     }
-    else{
-        compteurErreurL = 0;
-        borneLigne = 60;
-        borneColonne = 0;
-        for(unsigned i=0;i<7;i++){
-            if(i==6){
-                if((parite%2)!= acces_matrice(codebarre,borneLigne,borneColonne)){
-                    erreurLigne = borneLigne;
-                    compteurErreurL++;
-                }
-                if(compteurErreurL > 2){
-                    detruit_image(codebarre);
-                    return -2;
-                }
+    //Cherche une erreur dans le coin inférieur droit
+    compteurErreurL = 0;
+    borneLigne = 60;
+    borneColonne = 0;
+    for(unsigned i=0;i<7;i++){
+        if(i==6){
+            if((parite%2)!= acces_matrice(codebarre,borneLigne,borneColonne)){
+                erreurLigne = borneLigne;
+                compteurErreurL++;
             }
-            else{
-                parite += acces_matrice(codebarre,borneLigne,borneColonne);
-                borneColonne += 10;
+            if(compteurErreurL > 1){
+                detruit_image(codebarre);
+                return -2;
             }
         }
-        if(compteurErreurL)
-            multiplie_matricule(codebarre,!acces_matrice(codebarre,60,60),60,60,10);
+        else{
+            parite += acces_matrice(codebarre,borneLigne,borneColonne);
+            borneColonne += 10;
+        }
     }
+    if(compteurErreurL)
+        multiplie_matricule(codebarre,!acces_matrice(codebarre,60,60),60,60,10);
+
     write_pnm(codebarre,dossier_output);
     detruit_image(codebarre);
     return 0;
