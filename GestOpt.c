@@ -1,3 +1,11 @@
+/**
+ * \file Gestopt.c
+ *
+ * \brief Ce fichier contient l'implémentation d'une fonction qui gère les options passées en arguments
+ *
+ * \author Lorenzen Pierre s203724
+ * \date 24/03/2022
+ */
 #include <stdio.h>
 #include <getopt.h>
 #include "GestOpt.h"

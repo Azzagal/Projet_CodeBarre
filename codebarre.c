@@ -1,14 +1,13 @@
 /**
- * codebarre.c
+ * \file codebarre.c
  *
- * Ce fichier contient les définitions de types et
- * les fonctions de création de code barre au format
+ * \brief Ce fichier contient l'implémentation
+ * des fonctions de création de code barre au format
  * PNM.
- *
- * @author: Lorenzen Pierre s203724
- * @date: 02/04/2022
- * @projet: INFO0030 Projet 2
-**/
+ * 
+ * \author: Lorenzen Pierre s203724
+ * \date:01/04/2022
+ */
 
 #include <stdio.h>
 #include <stdlib.h>

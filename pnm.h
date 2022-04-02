@@ -17,7 +17,9 @@
 #define __PNM__
 
 /**
- * \brief Déclaration du type opaque PNM
+ * \struct PNM
+ * 
+ * \brief Représente une image au format PNM
  *
  */
 typedef struct PNM_t PNM;

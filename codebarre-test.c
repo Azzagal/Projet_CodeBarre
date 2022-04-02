@@ -1,10 +1,19 @@
+/**
+ * \file codebarre-test.c
+ *
+ * \brief Ce fichier contient les fonctions de test des fichiers pnm.c et codebarre.c.
+ *
+ * \author: Lorenzen Pierre s203724
+ * \date: 02/04/2022
+**/
+
 #include "seatest.h"
 #include "codebarre.h"
 #include "pnm.h"
 
 /**
  * 
- * Test de la fonction cree_image
+ * \brief Test de la fonction cree_image
  * 
 **/
 static void test_cree_image(){
@@ -22,7 +31,7 @@ static void test_cree_image(){
 
 /**
  * 
- * Test de la fonction verification_format
+ * \brief Test de la fonction verification_format
  * 
 **/
 static void test_verification_format(){
@@ -39,7 +48,7 @@ static void test_verification_format(){
 
 /**
  * 
- * Test de la fonction verifie_sortie
+ * \brief Test de la fonction verifie_sortie
  * 
 **/
 static void test_verifie_sortie(){
@@ -63,6 +72,12 @@ static void test_verifie_sortie(){
 
 }// fin test_verifie_sortie()
 
+/**
+ * 
+ * \brief Test de la fonction int_vers_binaire
+ * 
+**/
+
 static void test_int_vers_binaire(){
 
     int sortie1[32];
@@ -81,6 +96,11 @@ static void test_int_vers_binaire(){
 
  }// Fin test_cree_image()
 
+/**
+ * 
+ * \brief Test de la fonction verifie_matricule
+ * 
+**/
 static void test_verifie_matricule(){
 
     char *f1 ="20100749";

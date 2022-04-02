@@ -9,6 +9,7 @@
  */
 #ifndef __GESTOPT__
 #define __GESTOPT__
+
 /**
  * \fn void gestion_option(char *optstring, char *format, char *entree, char *sortie, int argc, char *argv[])
  *

@@ -23,6 +23,7 @@ clean:
 	rm -f *.o $(EXEC) $(EXEC_TEST) *.a *~
 
 doc:
+	$(DOXYGEN) -g Doc/Doxyfile
 	$(DOXYGEN) Doc/Doxyfile
 
 test:

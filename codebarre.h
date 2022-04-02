@@ -1,13 +1,12 @@
 /**
- * codebarre.h
+ * \file codebarre.h
  *
- * Ce fichier contient les déclarations de types et les prototypes
+ * \brief Ce fichier contient les déclarations
  * des fonctions de création de code barre au format
  * PNM.
  * 
- * @author: Lorenzen Pierre s203724
- * @date:01/04/2022
- * @projet: INFO0030 Projet 2
+ * \author: Lorenzen Pierre s203724
+ * \date:01/04/2022
  */
 #include"pnm.h"
 #ifndef __CODEBARRE__
@@ -42,8 +41,7 @@ int verifie_matricule(char *entree);
 /**
  * \fn void multiplie_matricule(PNM *image, unsigned valeur ,unsigned borneInf, unsigned taille)
  * 
- * \brief Donne la forme d'un matrice taille x taille à la valeur dans la matrice de l'image depuis
- *        borneInf comme départ.
+ * \brief Donne la forme d'un matrice taille x taille à la valeur dans la matrice de l'image depuis borneInf comme départ.
  * 
  * \param image un pointeur sur PNM.
  * \param valeur la valeur à recopié dans la matrice.
@@ -67,6 +65,7 @@ void multiplie_matricule(PNM *image, unsigned valeur ,unsigned borneLigne, unsig
  *      -1 Problème au chargement des matricules
  */
 int charge_matricule(char* fichier,char* dossier_output);
+
 /**
  * \fn int corrige_codebarre(char *nom_fichier)
  * 

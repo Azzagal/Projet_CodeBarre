@@ -1,12 +1,11 @@
 /**
- * pnm.c
+ * \file pnm.c
  *
- * Ce fichier contient les définitions de types et
+ * \brief Ce fichier contient les définitions de types et
  * les fonctions de manipulation d'images PNM.
  *
- * @author: Lorenzen Pierre s203724
- * @date: 31/03/2022
- * @projet: INFO0030 Projet 2
+ * \author: Lorenzen Pierre s203724
+ * \date: 02/04/2022
  */
 
 #include <stdio.h>
@@ -19,7 +18,7 @@
 
 /**
  * 
- * Définition du type opaque PNM
+ * \brief Définition du type opaque PNM
  *
  */
 struct PNM_t {

@@ -1,11 +1,10 @@
 /**
- * main.c
+ * \file main.c
  *
- * Ce fichier contient la fonction main du projet 2
+ * \brief Ce fichier contient la fonction main du projet 2
  *
- * @author: Lorenzen Pierre s203724
- * @date: 02/04/2022
- * @projet: INFO0030 Projet 2
+ * \author: Lorenzen Pierre s203724
+ * \date: 02/04/2022
 **/
 #include <stdio.h>
 #include "codebarre.h"
