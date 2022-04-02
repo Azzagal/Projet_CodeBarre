@@ -6,5 +6,5 @@ var searchData=
   ['acces_5fmatrice_108',['acces_matrice',['../pnm_8c.html#a5949e65c39cd116c4ae5ab5f0541a79e',1,'acces_matrice(PNM *image, unsigned ligne, unsigned colonne):&#160;pnm.c'],['../pnm_8h.html#a5949e65c39cd116c4ae5ab5f0541a79e',1,'acces_matrice(PNM *image, unsigned ligne, unsigned colonne):&#160;pnm.c']]],
   ['acces_5ftot_5fcoul_109',['acces_tot_coul',['../pnm_8c.html#ab1f2b62e42df2f54a51302167e2be374',1,'acces_tot_coul(PNM *image):&#160;pnm.c'],['../pnm_8h.html#ab1f2b62e42df2f54a51302167e2be374',1,'acces_tot_coul(PNM *image):&#160;pnm.c']]],
   ['acces_5ftype_110',['acces_type',['../pnm_8c.html#ab19f6ef15cd0e78d5d34c62159a09882',1,'acces_type(PNM *image):&#160;pnm.c'],['../pnm_8h.html#a9a273d2260acafb79f940aa19f43d290',1,'acces_type(PNM *image):&#160;pnm.c']]],
-  ['all_5ftests_111',['all_tests',['../codebarre-test_8c.html#abb908111d456332263463841974009ea',1,'all_tests(void):&#160;codebarre-test.c'],['../pnm-test_8c.html#abb908111d456332263463841974009ea',1,'all_tests(void):&#160;pnm-test.c']]]
+  ['all_5ftests_111',['all_tests',['../codebarre-test_8c.html#abb908111d456332263463841974009ea',1,'codebarre-test.c']]]
 ];

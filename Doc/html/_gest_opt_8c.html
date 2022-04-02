@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Référence du fichier GestOpt.c</title>
+<title>My Project: Référence du fichier /home/pierre/Documents/Projet/Projet_CodeBarre/GestOpt.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -59,6 +59,10 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f396504afdc959660871b003fa10164d.html">Documents</a></li><li class="navelem"><a class="el" href="dir_0a1b3a577f31e36d12f98a7454e0a34c.html">Projet</a></li><li class="navelem"><a class="el" href="dir_9b839bdcdf2b731587b694328faf46d0.html">Projet_CodeBarre</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
@@ -67,6 +71,9 @@ $(function() {
 <div class="title">Référence du fichier GestOpt.c</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Ce fichier contient l'implémentation d'une fonction qui gère les options passées en arguments.  
+<a href="#details">Plus de détails...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;getopt.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="_gest_opt_8h_source.html">GestOpt.h</a>&quot;</code><br />
@@ -75,18 +82,21 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de GestOpt.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="_gest_opt_8c__incl.png" border="0" usemap="#_gest_opt_8c" alt=""/></div>
+<div class="center"><img src="_gest_opt_8c__incl.png" border="0" usemap="#_2home_2pierre_2_documents_2_projet_2_projet___code_barre_2_gest_opt_8c" alt=""/></div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:ad76dbb4b89727e0a47cd473f291b95b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gest_opt_8c.html#ad76dbb4b89727e0a47cd473f291b95b6">gestion_option</a> (char *optstring, char *format, char *entree, char *sortie, int argc, char *argv[])</td></tr>
-<tr class="memdesc:ad76dbb4b89727e0a47cd473f291b95b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gère les options introduites à l'execution d'un programme.  <a href="_gest_opt_8c.html#ad76dbb4b89727e0a47cd473f291b95b6">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ad76dbb4b89727e0a47cd473f291b95b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28939a3a2a507520fbd34e5bf79e462e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gest_opt_8c.html#a28939a3a2a507520fbd34e5bf79e462e">gestion_option</a> (char *optstring, char *format, char *entree, char *sortie, char *c, int argc, char *argv[])</td></tr>
+<tr class="separator:a28939a3a2a507520fbd34e5bf79e462e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des fonctions</h2>
-<a id="ad76dbb4b89727e0a47cd473f291b95b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad76dbb4b89727e0a47cd473f291b95b6">&#9670;&nbsp;</a></span>gestion_option()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Ce fichier contient l'implémentation d'une fonction qui gère les options passées en arguments. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Lorenzen Pierre s203724 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>24/03/2022 </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a28939a3a2a507520fbd34e5bf79e462e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28939a3a2a507520fbd34e5bf79e462e">&#9670;&nbsp;</a></span>gestion_option()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -118,6 +128,12 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>argc</em>, </td>
         </tr>
@@ -134,19 +150,6 @@ Fonctions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Gère les options introduites à l'execution d'un programme. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">optstring</td><td>est la chaine de caractères qui défini les paramètres à prendre en compte. </td></tr>
-    <tr><td class="paramname">format</td><td>est le format du fichier passé en argument. </td></tr>
-    <tr><td class="paramname">entree</td><td>est l'emplacement du fichier passé en argument. </td></tr>
-    <tr><td class="paramname">sortie</td><td>est le nom du fichier de sortie. </td></tr>
-    <tr><td class="paramname">argc</td><td>le premier argument de la fonction main. </td></tr>
-    <tr><td class="paramname">argv</td><td>le deuxième argument de la fonxtion main. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
